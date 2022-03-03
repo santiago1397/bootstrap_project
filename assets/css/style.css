@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@200;400&display=swap');
+body{
+    font-family: Raleway;
+    font-weight: 400;
+}
+#Main-Home{
+    background-image: url(../img/bg-home.jpg);
+    width: 100%;
+    background-size: 100% 100%;
+}
+.iconChange{
+    color: #000000;
+}
+
+.iconChange:hover{
+    color: #FF004D;
+}
+.order-btn{
+    background-color: #ff004d;
+    color:white;
+    border-radius:5px;
+    text-decoration: none;
+}
+.order-btn:hover{
+    color: white;
+    
+}
+
+.bg-pink{
+    background-color: #ff004d;
+    color: #ffffff;
+    border-radius: 5px;
+}
+
+.bg-pink:hover{
+    background-color: #ffffff;
+    color: #ff004d;
+    border-radius: 5px;
+    border: 2px solid #ff004d;
+}
+
+.letters{
+    color:black;
+}
+
+.letters:hover{
+    color: #ff004d !important; 
+}
+
+/*how to edit the carousel buttons*/
+#banner-slider .owl-carousel .owl-nav button{
+    position: absolute;
+    top: 30%;
+    outline: none;
+}
+#banner-slider .owl-carousel .owl-nav button.owl-prev{
+    left:0;
+}
+#banner-slider .owl-carousel .owl-nav button.owl-next{ 
+    right: 0;
+}
+#banner-slider .owl-carousel .owl-nav button span{ 
+    font-size: 56px;
+    padding: 0 1rem;
+    color:#FF004D;
+}
+#banner-slider .owl-carousel .owl-nav button.owl-prev span{
+    margin-left: -5rem;
+}
+#banner-slider .owl-carousel .owl-nav button.owl-next span{ 
+    margin-right: -5rem;
+}
+
+/*how to change the color of the dots*/
+#banner-slider .owl-carousel .owl-dots button.active span{
+    background-color: #FF004D;
+}
+
+@media only screen and(max-width:580px){
+    #banner-slider .owl-carousel .owl-nav button{
+        display:none;
+    }
+}
