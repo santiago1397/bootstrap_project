@@ -1,4 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@200;400&display=swap');
+*{
+    transition: all .2s linear;
+    font-weight:bold;
+}
 body{
     font-family: Raleway;
     font-weight: 400;
@@ -8,6 +12,12 @@ body{
     width: 100%;
     background-size: 100% 100%;
 }
+.colorText{
+    color: #FF004D;
+}
+.logoS{
+    cursor: pointer;
+}
 .iconChange{
     color: #000000;
 }
@@ -16,14 +26,20 @@ body{
     color: #FF004D;
 }
 .order-btn{
+    margin-left: 15px !important ;
+    width: 30%;
     background-color: #ff004d;
-    color:white;
-    border-radius:5px;
+    border-radius: 15px;
+    padding: 2px 10px;
+    border-color:#FF004D;
+}
+.order-btn a{
     text-decoration: none;
+    color:#ffffff;
 }
 .order-btn:hover{
-    color: white;
-    
+    box-shadow: 3px 3px 2px 1px rgba(0, 0, 0, 0.2);
+    transform: scale(1.1);
 }
 
 .bg-pink{
@@ -76,8 +92,234 @@ body{
     background-color: #FF004D;
 }
 
-@media only screen and(max-width:580px){
+
+
+.mask{
+    background: linear-gradient(
+              45deg,
+              rgba(29, 236, 197, 0.7),
+              rgba(91, 14, 214, 0.7) 100%
+            );
+}
+.Gimg{
+    background:linear-gradient(90deg, rgba(255,250,255,1), rgba(0,0,0,0)), url(../img/about-bg.png) no-repeat center center / cover;
+    
+}
+.no-bold{
+    font-weight: lighter;
+}
+.mybtn{
+    padding: 5px;
+    position: relative;
+    overflow: hidden;
+    border-style: solid;
+    border-color:#FF004D;
+    background: #ff004d;
+    border-radius: 7px;
+    z-index: 1;
+    padding-left: 3rem;
+    padding-right: 3rem;
+}
+.mybtn::before{
+    content:'';
+    position: absolute;
+    top:0; left:0;
+    height:100%;
+    width:0%;
+    transition: .2s;
+    background:white;
+    z-index: -1;
+}
+.mybtn:hover::before{
+    width: 100%;
+}
+.mybtn:hover a{
+    color: #FF004D;
+}
+.mybtn a{
+    text-decoration: none;
+    color: white;
+}
+.offers{
+    background-color: rgb(238, 231, 231);
+    padding-left: 0;
+    padding-right: 0;
+}
+.promos{
+    width: 250px;
+    cursor: pointer;
+
+}
+.promos:hover{
+    transform: scale(0.9);
+}
+.dividerA{
+    width: 100%;
+    height: 80px;
+    border-bottom:solid 3px #fff;
+    position: relative;
+}
+.dividerB{
+    position: absolute;
+    border-bottom:solid 3px #ff004d;
+    height: 100%;
+    bottom: -3px;
+}
+.dishes{
+    padding-top: 6rem !important;
+    background-color: rgb(238, 231, 231);
+}
+
+.box-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-top: 4rem;
+}
+.box{
+    height: 15rem;
+    width: 25rem;
+    border-radius: .5rem;
+    margin: 1rem;
+    cursor: pointer;
+    overflow: hidden;
+    position: relative;
+    -webkit-box-shadow: 0 0 .5rem #333;
+    box-shadow: 0 0 .5rem #333;
+}
+.box img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.box .info{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(51, 51, 51, 0.6);
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+    color: #fff;
+    transform: scale(0);
+}
+.box .info p{
+    font-weight: normal;
+    border-bottom:3px solid #ff004d;
+    border-top:3px solid #ff004d;
+}
+.box:hover .info{
+    -webkit-transform: scale(1);
+    transform: scale(1);
+}
+
+/*Contact Us*/
+.contact-us{
+    height: 80vh;
+    position: relative;
+    background-image: url(../img/contact-bg.jpg);
+}
+.contact-us img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.form-inside{
+    width: 100%;
+    padding: 4rem;
+    position: absolute;
+    top:0%;
+    bottom: 0%;
+    display: flex;
+    justify-content: space-between;
+}
+form{
+    height: 90%;
+}
+.fill{
+    position: relative;
+    margin-top: 15px;
+}
+.form_input{
+    width: 100%;
+    border: solid 2px #FF004D;
+    border-radius: 5px;
+    background-color:rgba(255, 255, 255, 0.5);
+    outline: none;
+}
+.form_input:focus{
+    border: solid 3px #FF004D;
+}
+.form_input:focus ~ label{
+    top: -1.2em;
+    font-size: 0.8rem;
+    color:#FF004D;
+    font-weight: bold;
+}
+textarea{
+    margin-top: 15px;
+    border: solid 2px #FF004D;
+    border-radius: 5px;
+    background-color:rgba(255, 255, 255, 0.7);
+    outline: none;
+}
+label{
+    position: absolute;
+    top: 0.2em;
+    left: 0.5em;
+    cursor: text;
+}
+
+.send{
+    margin-top: 1.3rem;
+    border:solid 2px #FF004D;
+    border-radius: 10px;
+    color:#FF004D;
+
+}
+.send:hover{
+    background-color: #FF004D;
+    color: white;
+    box-shadow: 10px 5px 5px black;
+}
+/*Contact Us END*/
+
+
+/*footer*/
+footer{
+    padding:2rem 5rem ;
+    background-color:rgb(238, 231, 231);
+}
+.subcription{
+    border:solid 2px #FF004D;
+    border-radius: 10px;
+    outline: none;
+}
+.subcriptionBtn{
+    border-radius: 10px;
+    outline: none;
+    border:solid 2px #FF004D;
+    color:#FF004D;
+    background-color: white;
+}
+.subcriptionBtn:hover{
+    color: white;
+    background-color: #FF004D;
+    transform: scale(1.05);
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+
+
+@media only screen and(max-width:600px){
     #banner-slider .owl-carousel .owl-nav button{
         display:none;
+        visibility: hidden;
     }
 }
